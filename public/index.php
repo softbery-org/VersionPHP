@@ -7,16 +7,28 @@
 // You should have received a copy of the license along with this
 // work. If not, see <http://creativecommons.org/licenses/by-sa/4.0/>.
 
-define('__ROOTDIR__', __DIR__.'/../');
+define('__ROOTDIR__', __DIR__ . '/../');
 
-include __ROOTDIR__.'/vendor/autoload.php';
+include __ROOTDIR__ . '/vendor/autoload.php';
 
-use Softbery\Database\Db;
+use Softbery\Configuration;
 use Softbery\Config\Config;
+use Softbery\Database\Db;
+use Softbery\Module;
+use Softbery\MVC\Controller;
 
-$conf = new Config();
-
-$db = new Db();
-
+$controller = new Controller();
+$mod        = new Module();
+$conf       = new Config();
+$db         = new Db();
+$config_ini = new Configuration();
 
 var_dump($db);
+var_dump($controller);
+var_dump($mod->Modules);
+
+echo $config_ini->getIni("display_errors");
+echo "<br>";
+echo $config_ini->retBytes("1,44mb");
+echo "<br>";
+echo $config_ini->retBoolean("aff");

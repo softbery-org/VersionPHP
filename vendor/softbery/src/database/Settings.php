@@ -7,11 +7,21 @@
 // You should have received a copy of the license along with this
 // work. If not, see <http://creativecommons.org/licenses/by-sa/4.0/>.
 
-namespace Application\Modules;
+namespace Softbery\Database;
 
-class AppMods
+use mysqli;
+use PDO;
+use Softbery\Config\Config;
+
+class Settings
 {
+    protected $settings;
+    
     public function __construct()
     {
+        $config = new Config;
+        $config->getConfig();
+        $settings = $config->config;
+        //$_db_config = $_db_config->config['database'];
     }
 }

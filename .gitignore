@@ -1,3 +1,5 @@
+.gitignore
 commandline-scripts/*
 vendor/*
-.gitignore
+!vendor/softbery
+*.php;

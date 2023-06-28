@@ -1,0 +1,17 @@
+{
+    "name": "softbery/softbery",
+    "type": "library",
+    "description": "",
+    "keywords": [""],
+    "homepage": "http://softbery.ddns.net/",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.2.5"
+    },
+    "autoload": {
+        "psr-4" : {
+            "Softbery\\" : "src/"
+        }
+    }
+}
