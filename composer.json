@@ -1,0 +1,27 @@
+{
+    "name": "softbery/softbery-mvc-skeleton",
+    "description": "Softbery MVC Skeleton Application",
+    "type": "project",
+    "license": "MIT",
+    "keywords": [
+        "softbery",
+        "mvc",
+        "skeleton",
+        "framework"
+    ],
+    "require": {
+        "php": "^7.3 || ~8.0.0",
+        "twig/twig": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Application\\": "application/modules/",
+            "Application\\Backend\\": "application/modules/Backend/",
+            "Application\\Frontend\\": "application/modules/Frontend/",
+            "Softbery\\": "vendor/softbery/src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {}
+    }
+}
